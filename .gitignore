@@ -1,0 +1,26 @@
+# Project Settings
+.vs/
+
+# Visual Studio
+*.user
+*.sdf
+*.VC.opendb
+
+# Build
+_bin/
+_obj/
+
+# Compiled Source
+*.dll
+*.exe
+
+# OS Files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+ehthumbs.db
+Thumbs.db
+
+# Misc
+*.tmp
+*.lock.*
