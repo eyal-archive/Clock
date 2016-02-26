@@ -1,5 +1,21 @@
 #include "Timer.h"
 
+Timer::Timer()
+	: _onThick(new Event()) {
+}
+
+Timer::~Timer() {
+	delete _onThick;
+}
+
+void Timer::Attach(std::function<void(Event*)> func) {
+	_onThick->Attach(func);
+}
+
+void Timer::Detach(std::function<void(Event*)> func) {
+	// todo: NYI
+}
+
 int Timer::GetHour() {
 	return _hour;
 }
@@ -24,15 +40,14 @@ void Timer::Thick() {
 #endif
 
 	_second = lt->tm_sec;
-	
+
 	if (_second != _oldSec)
 	{
 		_hour = lt->tm_hour;
 		_minute = lt->tm_min;
-
 		_oldSec = _second;
 
-		Notify();
+		_onThick->Notify();
 	}
 }
 

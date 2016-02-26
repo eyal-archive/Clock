@@ -160,9 +160,8 @@
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="DigitalClockConsoleDisplay.cpp" />
     <ClCompile Include="DigitalClockTimeFormatter.cpp" />
+    <ClCompile Include="Event.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Observer.cpp" />
-    <ClCompile Include="Subject.cpp" />
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -172,8 +171,7 @@
     <ClInclude Include="DigitalClockTimeFormatter.h" />
     <ClInclude Include="TimeFormatter.h" />
     <ClInclude Include="Timer.h" />
-    <ClInclude Include="Observer.h" />
-    <ClInclude Include="Subject.h" />
+    <ClInclude Include="Event.h" />
     <ClInclude Include="ClockDisplay.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

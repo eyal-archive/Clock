@@ -6,9 +6,10 @@
 
 int main() {
 	Console console;
+
 	DigitalClockTimeFormatter formatter;
 	DigitalClockConsoleDisplay digitalDisplay(formatter, console);
-
+	
 	Timer timer;
 	Clock digital(timer, digitalDisplay);
 

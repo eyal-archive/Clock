@@ -1,14 +1,14 @@
 #pragma once
 #include "Timer.h"
 #include "ClockDisplay.h"
-#include "Subject.h"
 
-class Clock final : public Observer {
+class Clock final {
 public:
 	Clock(Timer& timer, ClockDisplay& display);
 	~Clock();
-	void OnUpdate(Subject* timer) override;
 private:
+	void Update();
+
 	Timer& _timer;
 	ClockDisplay& _display;
 };
