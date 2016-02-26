@@ -11,11 +11,9 @@ int main() {
 	DigitalClockConsoleDisplay digitalDisplay(formatter, console);
 	
 	Timer timer;
-	Clock digital(timer, digitalDisplay);
+	Clock digitalClock(timer, digitalDisplay);
 
-	while (true) {
-		timer.Thick();
-	}
+	digitalClock.Start();
 
-	std::cin.get();
+	//std::cin.get();
 }

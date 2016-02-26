@@ -6,6 +6,8 @@ class Clock final {
 public:
 	Clock(Timer& timer, ClockDisplay& display);
 	~Clock();
+	void Start();
+	void Stop();
 private:
 	void Update();
 

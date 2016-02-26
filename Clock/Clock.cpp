@@ -3,10 +3,21 @@
 
 Clock::Clock(Timer& timer, ClockDisplay& display)
 	: _timer(timer), _display(display) {
-	_timer.Attach(std::bind(&Clock::Update, this));
 }
 
 Clock::~Clock() {
+}
+
+void Clock::Start() {
+	_timer.Attach(std::bind(&Clock::Update, this));
+
+	while (true) {
+		_timer.Thick();
+	}
+}
+
+void Clock::Stop() {
+	// todo: NYI
 }
 
 void Clock::Update() {
