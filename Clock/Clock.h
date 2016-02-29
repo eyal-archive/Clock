@@ -9,8 +9,6 @@ public:
 	void Start();
 	void Stop();
 private:
-	void Update();
-
 	Timer& _timer;
 	ClockDisplay& _display;
 };

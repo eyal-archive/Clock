@@ -29,22 +29,22 @@ int Timer::GetSecond() {
 }
 
 void Timer::Thick() {
-	time_t t = time(0);
+	auto currentTime = time(0);
 
 #if (_MSC_VER >= 1400) 
 #pragma warning(disable: 4996)
 #endif
-	tm *lt = localtime(&t);
+	auto *localTime = localtime(&currentTime);
 #if (_MSC_VER >= 1400) 
 #pragma warning(default: 4996)
 #endif
 
-	_second = lt->tm_sec;
+	_second = localTime->tm_sec;
 
 	if (_second != _oldSec)
 	{
-		_hour = lt->tm_hour;
-		_minute = lt->tm_min;
+		_hour = localTime->tm_hour;
+		_minute = localTime->tm_min;
 		_oldSec = _second;
 
 		_onThick->Notify();

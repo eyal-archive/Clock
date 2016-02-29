@@ -9,7 +9,13 @@ Clock::~Clock() {
 }
 
 void Clock::Start() {
-	_timer.Attach(std::bind(&Clock::Update, this));
+	_timer.Attach([this](Event*) {
+		int hour = _timer.GetHour();
+		int minute = _timer.GetMinute();
+		int second = _timer.GetSecond();
+
+		_display.Draw(hour, minute, second);
+	});
 
 	while (true) {
 		_timer.Thick();
@@ -18,12 +24,4 @@ void Clock::Start() {
 
 void Clock::Stop() {
 	// todo: NYI
-}
-
-void Clock::Update() {
-	int hour = _timer.GetHour();
-	int minute = _timer.GetMinute();
-	int second = _timer.GetSecond();
-
-	_display.Draw(hour, minute, second);
 }

@@ -9,11 +9,7 @@ void Event::Detach(std::function<void(Event*)> func) {
 }
 
 void Event::Notify() {
-	typedef std::list<std::function<void(Event*)>>::iterator iterator;
-
-	iterator it;
-
-	for (it = _funcs.begin(); it != _funcs.end(); ++it) {
-		(*it)(this);
+	for (auto item : _funcs) {
+		item(this);
 	}
 }
