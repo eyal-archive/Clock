@@ -1,6 +1,9 @@
 #pragma once
+#include "Second.h"
+#include "Minute.h"
+#include "Hour.h"
 
 class ClockDisplay {
 public:
-	virtual void Draw(int, int, int) noexcept = 0;
+	virtual void Draw(Hour, Minute, Second) noexcept = 0;
 };

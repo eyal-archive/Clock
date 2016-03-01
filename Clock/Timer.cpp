@@ -16,15 +16,15 @@ void Timer::Detach(std::function<void(Event*)> func) {
 	// todo: NYI
 }
 
-int Timer::GetHour() {
+Hour Timer::GetHour() {
 	return _hour;
 }
 
-int Timer::GetMinute() {
+Minute Timer::GetMinute() {
 	return _minute;
 }
 
-int Timer::GetSecond() {
+Second Timer::GetSecond() {
 	return _second;
 }
 
@@ -34,18 +34,18 @@ void Timer::Thick() {
 #if (_MSC_VER >= 1400) 
 #pragma warning(disable: 4996)
 #endif
-	auto *localTime = localtime(&currentTime);
+	auto* localTime = localtime(&currentTime);
 #if (_MSC_VER >= 1400) 
 #pragma warning(default: 4996)
 #endif
 
-	_second = localTime->tm_sec;
+	_second = Second(localTime);
 
-	if (_second != _oldSec)
+	if (_second.GetValue() != _oldSec)
 	{
-		_hour = localTime->tm_hour;
-		_minute = localTime->tm_min;
-		_oldSec = _second;
+		_hour = Hour(localTime);
+		_minute = Minute(localTime);
+		_oldSec = _second.GetValue();
 
 		_onThick->Notify();
 	}

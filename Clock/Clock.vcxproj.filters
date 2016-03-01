@@ -24,9 +24,6 @@
     <ClCompile Include="Console.Win32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DigitalClockTimeFormatter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DigitalClockConsoleDisplay.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,15 +33,24 @@
     <ClCompile Include="Event.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Second.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeValue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Minute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Console.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TimeFormatter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ClockDisplay.h">
@@ -56,10 +62,19 @@
     <ClInclude Include="DigitalClockConsoleDisplay.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DigitalClockTimeFormatter.h">
+    <ClInclude Include="Event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Event.h">
+    <ClInclude Include="Hour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Minute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Second.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeValue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -10,9 +10,9 @@ Clock::~Clock() {
 
 void Clock::Start() {
 	_timer.Attach([this](Event*) {
-		int hour = _timer.GetHour();
-		int minute = _timer.GetMinute();
-		int second = _timer.GetSecond();
+		Hour hour = _timer.GetHour();
+		Minute minute = _timer.GetMinute();
+		Second second = _timer.GetSecond();
 
 		_display.Draw(hour, minute, second);
 	});

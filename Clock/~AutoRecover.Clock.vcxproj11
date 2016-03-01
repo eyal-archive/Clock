@@ -159,6 +159,7 @@
     <ClCompile Include="Console.Win32.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="DigitalClockConsoleDisplay.cpp" />
+    <ClCompile Include="DigitalClockTimeFormatter.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="Hour.cpp" />
     <ClCompile Include="Minute.cpp" />
@@ -171,10 +172,12 @@
     <ClInclude Include="Clock.h" />
     <ClInclude Include="Console.h" />
     <ClInclude Include="DigitalClockConsoleDisplay.h" />
+    <ClInclude Include="DigitalClockTimeFormatter.h" />
     <ClInclude Include="Hour.h" />
     <ClInclude Include="Minute.h" />
     <ClInclude Include="Second.h" />
     <ClInclude Include="TimeValue.h" />
+    <ClInclude Include="TimeFormatter.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="ClockDisplay.h" />

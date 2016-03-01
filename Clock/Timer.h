@@ -1,6 +1,9 @@
 #pragma once
 #include <ctime>
 #include "Event.h"
+#include "Second.h"
+#include "Minute.h"
+#include "Hour.h"
 
 class Timer final {
 public:
@@ -10,17 +13,17 @@ public:
 	void Attach(std::function<void(Event*)> func);
 	void Detach(std::function<void(Event*)> func);
 
-	int GetHour();
-	int GetMinute();
-	int GetSecond();
+	Hour GetHour();
+	Minute GetMinute();
+	Second GetSecond();
 
 	void Thick();
 private:
 	Event* _onThick;
 
-	int _hour = 0;
-	int _minute = 0;
-	int _second = 0;
+	Hour _hour;
+	Minute _minute;
+	Second _second;
 
 	int _oldSec = -1;
 };
