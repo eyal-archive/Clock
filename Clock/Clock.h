@@ -4,7 +4,7 @@
 
 class Clock final {
 public:
-	Clock(Timer& timer, ClockDisplay& display);
+	Clock(Timer&, ClockDisplay&);
 	~Clock();
 	void Start();
 	void Stop();

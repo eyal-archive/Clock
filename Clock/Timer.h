@@ -10,8 +10,8 @@ public:
 	Timer();
 	~Timer();
 
-	void Attach(std::function<void(Event*)> func);
-	void Detach(std::function<void(Event*)> func);
+	void Attach(std::function<void(Event*)>);
+	void Detach(std::function<void(Event*)>);
 
 	Hour GetHour();
 	Minute GetMinute();

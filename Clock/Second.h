@@ -4,7 +4,7 @@
 class Second final : public TimeValue {
 public:
 	Second();
-	Second(tm* time);
+	Second(tm*);
 	~Second();
 
 	int GetValue() override;

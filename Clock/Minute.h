@@ -4,7 +4,7 @@
 class Minute final : public TimeValue {
 public:
 	Minute();
-	Minute(tm* time);
+	Minute(tm*);
 	~Minute();
 
 	int GetValue() override;
