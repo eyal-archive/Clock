@@ -20,7 +20,6 @@ std::string TimeValue::ToString() {
 }
 
 std::string TimeValue::ToString(bool addZeroBelowTen) {
-
 	int value = GetValue();
 	std::string str_value = std::to_string(value);
 

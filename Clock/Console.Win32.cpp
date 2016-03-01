@@ -20,7 +20,6 @@ Console::Console() {
 }
 
 Console::~Console() {
-	delete _out;
 }
 
 void Console::Write(std::string out) {
