@@ -18,7 +18,7 @@ void Clock::Start() {
 	});
 
 	while (true) {
-		_timer.Thick();
+		_timer.Tick();
 	}
 }
 

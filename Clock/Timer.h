@@ -17,7 +17,7 @@ public:
 	Minute GetMinute();
 	Second GetSecond();
 
-	void Thick();
+	void Tick();
 private:
 	Event* _onThick;
 

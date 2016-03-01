@@ -28,7 +28,7 @@ Second Timer::GetSecond() {
 	return _second;
 }
 
-void Timer::Thick() {
+void Timer::Tick() {
 	auto currentTime = time(0);
 
 #if (_MSC_VER >= 1400) 
