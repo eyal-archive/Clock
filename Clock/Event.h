@@ -4,9 +4,18 @@
 
 class Event final {
 public:
-	void Attach(std::function<void(Event*)>);
-	void Detach(std::function<void(Event*)>);
+	class Callback final {
+	public:
+		explicit Callback(std::function<void(Event*)>);
+		~Callback();
+		void operator()(Event*);
+	private:
+		std::function<void(Event*)> _func;
+	};
+
+	Callback Attach(std::function<void(Event*)>);
+	void Detach(Callback);
 	void Notify();
 private:
-	std::list<std::function<void(Event*)>> _funcs;
+	std::list<Callback> _callbacks;
 };

@@ -11,7 +11,6 @@ public:
 	~Timer();
 
 	void Attach(std::function<void(Event*)>);
-	void Detach(std::function<void(Event*)>);
 
 	Hour GetHour();
 	Minute GetMinute();

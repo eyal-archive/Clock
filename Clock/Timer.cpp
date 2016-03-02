@@ -12,10 +12,6 @@ void Timer::Attach(std::function<void(Event*)> func) {
 	_onThick->Attach(func);
 }
 
-void Timer::Detach(std::function<void(Event*)> func) {
-	// todo: NYI
-}
-
 Hour Timer::GetHour() {
 	return _hour;
 }

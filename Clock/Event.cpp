@@ -1,15 +1,29 @@
+#include <random>
 #include "Event.h"
 
-void Event::Attach(std::function<void(Event*)> func) {
-	_funcs.push_back(func);
+Event::Callback::Callback(std::function<void(Event*)> func)
+	: _func(func) {
 }
 
-void Event::Detach(std::function<void(Event*)> func) {
+Event::Callback::~Callback() {
+}
+
+void Event::Callback::operator()(Event* e) {
+	_func(e);
+}
+
+Event::Callback Event::Attach(std::function<void(Event*)> func) {
+	Callback callback = Callback(func);
+	_callbacks.push_back(callback);
+	return callback;
+}
+
+void Event::Detach(Callback callback) {
 	// todo: NYI
 }
 
 void Event::Notify() {
-	for (auto item : _funcs) {
-		item(this);
+	for (auto callback : _callbacks) {
+		callback(this);
 	}
 }
