@@ -4,7 +4,7 @@
 class Hour final : public TimeValue {
 public:
 	Hour();
-	Hour(tm*);
+	explicit Hour(tm*);
 	~Hour();
 
 	int GetValue() override;
