@@ -1,8 +1,9 @@
 #include <random>
+#include <algorithm>
 #include "Event.h"
 
-Event::Callback::Callback(std::function<void(Event*)> func)
-	: _func(func) {
+Event::Callback::Callback(Event& e, std::function<void(Event*)> func)
+	: _id(e._idCounter), _func(func) {
 }
 
 Event::Callback::~Callback() {
@@ -12,14 +13,27 @@ void Event::Callback::operator()(Event* e) {
 	_func(e);
 }
 
+bool Event::Callback::operator==(const Callback& other) {
+	return this->_id == other._id;
+}
+
+bool Event::Callback::operator!=(const Callback& other) {
+	return !operator==(other);
+}
+
+std::list<Event::Callback>::size_type Event::Callback::GetID() {
+	return _id;
+}
+
 Event::Callback Event::Attach(std::function<void(Event*)> func) {
-	Callback callback = Callback(func);
+	Callback callback = Callback(*this, func);
 	_callbacks.push_back(callback);
+	_idCounter++;
 	return callback;
 }
 
 void Event::Detach(Callback callback) {
-	// todo: NYI
+	_callbacks.remove(callback);
 }
 
 void Event::Notify() {
@@ -27,3 +41,12 @@ void Event::Notify() {
 		callback(this);
 	}
 }
+
+std::list<Event::Callback>::size_type Event::Size() {
+	return _callbacks.size();
+}
+
+bool Event::Contains(Callback callback) {
+	return std::find(_callbacks.begin(), _callbacks.end(), callback) != _callbacks.end();
+}
+
