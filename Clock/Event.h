@@ -10,13 +10,11 @@ public:
 		~Callback();
 
 		void operator()(Event*);
-		bool operator==(const Callback&);
-		bool operator!=(const Callback&);
 
-		std::list<Callback>::size_type GetID();
+		std::list<Callback>::size_type GetID() const;
 	private:
-		std::list<Callback>::size_type _id;
-		std::function<void(Event*)> _func;
+		const std::list<Callback>::size_type _id;
+		const std::function<void(Event*)> _func;
 	};
 
 	Callback Attach(std::function<void(Event*)>);
@@ -29,3 +27,6 @@ private:
 	std::list<Callback>::size_type _idCounter = 0;
 	std::list<Callback> _callbacks;
 };
+
+bool operator==(const Event::Callback& lhs, const Event::Callback& rhs);
+bool operator!=(const Event::Callback& lhs, const Event::Callback& rhs);

@@ -12,6 +12,4 @@ int main() {
 	Clock digitalClock(timer, digitalDisplay);
 
 	digitalClock.Start();
-
-	//std::cin.get();
 }

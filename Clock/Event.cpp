@@ -13,15 +13,15 @@ void Event::Callback::operator()(Event* e) {
 	_func(e);
 }
 
-bool Event::Callback::operator==(const Callback& other) {
-	return this->_id == other._id;
+bool operator==(const Event::Callback& lhs, const Event::Callback& rhs) {
+	return lhs.GetID() == rhs.GetID();
 }
 
-bool Event::Callback::operator!=(const Callback& other) {
-	return !operator==(other);
+bool operator!=(const Event::Callback& lhs, const Event::Callback& rhs) {
+	return !operator==(lhs, rhs);
 }
 
-std::list<Event::Callback>::size_type Event::Callback::GetID() {
+std::list<Event::Callback>::size_type Event::Callback::GetID() const {
 	return _id;
 }
 
