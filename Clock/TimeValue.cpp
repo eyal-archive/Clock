@@ -1,25 +1,25 @@
 #include "TimeValue.h"
 
-TimeValue::TimeValue() {
-	_value = nullptr;
+TimeValue::TimeValue()
+	: _value(nullptr) {
+}
+
+TimeValue::TimeValue(int* const value)
+	: _value(value){
 }
 
 TimeValue::~TimeValue() {
 }
 
-void TimeValue::SetTimePointer(int* value) {
-	_value = value;
+int TimeValue::GetValue() const {
+	return *_value;
 }
 
-int* TimeValue::GetTimePointer() {
-	return _value;
-}
-
-std::string TimeValue::ToString() {
+std::string TimeValue::ToString() const {
 	return std::to_string(GetValue());
 }
 
-std::string TimeValue::ToString(bool addZeroBelowTen) {
+std::string TimeValue::ToString(bool addZeroBelowTen) const {
 	int value = GetValue();
 	std::string str_value = std::to_string(value);
 

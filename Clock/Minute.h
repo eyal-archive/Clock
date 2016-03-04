@@ -6,6 +6,4 @@ public:
 	Minute();
 	explicit Minute(tm*);
 	~Minute();
-
-	int GetValue() override;
 };

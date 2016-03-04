@@ -12,15 +12,15 @@ void Timer::Attach(std::function<void(Event*)> func) {
 	_onThick->Attach(func);
 }
 
-Hour Timer::GetHour() {
+Hour Timer::GetHour() const {
 	return _hour;
 }
 
-Minute Timer::GetMinute() {
+Minute Timer::GetMinute() const {
 	return _minute;
 }
 
-Second Timer::GetSecond() {
+Second Timer::GetSecond() const {
 	return _second;
 }
 

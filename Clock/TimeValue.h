@@ -4,15 +4,13 @@
 
 class TimeValue {
 public:
-	virtual int GetValue() = 0;
-	std::string ToString();
-	std::string ToString(bool);
+	int GetValue() const;
+	std::string ToString() const;
+	std::string ToString(bool) const;
 protected:
 	TimeValue();
+	TimeValue(int* const);
 	virtual ~TimeValue();
-
-	void SetTimePointer(int*);
-	int* GetTimePointer();
 private:
-	int* _value;
+	const int* _value;
 };

@@ -6,6 +6,4 @@ public:
 	Second();
 	explicit Second(tm*);
 	~Second();
-
-	int GetValue() override;
 };

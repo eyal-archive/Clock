@@ -3,13 +3,9 @@
 Hour::Hour() : TimeValue() {
 }
 
-Hour::Hour(tm* time) {
-	SetTimePointer(&time->tm_hour);
+Hour::Hour(tm* time)
+	: TimeValue(&time->tm_hour) {
 }
 
 Hour::~Hour() {
-}
-
-int Hour::GetValue() {
-	return *GetTimePointer();
 }

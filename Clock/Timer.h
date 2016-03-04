@@ -12,9 +12,9 @@ public:
 
 	void Attach(std::function<void(Event*)>);
 
-	Hour GetHour();
-	Minute GetMinute();
-	Second GetSecond();
+	Hour GetHour() const;
+	Minute GetMinute() const;
+	Second GetSecond() const;
 
 	void Tick();
 private:

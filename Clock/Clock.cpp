@@ -10,11 +10,7 @@ Clock::~Clock() {
 
 void Clock::Start() {
 	_timer.Attach([this](Event*) {
-		Hour hour = _timer.GetHour();
-		Minute minute = _timer.GetMinute();
-		Second second = _timer.GetSecond();
-
-		_display.Draw(hour, minute, second);
+		_display.Draw(_timer.GetHour(), _timer.GetMinute(), _timer.GetSecond());
 	});
 
 	while (true) {
