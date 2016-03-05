@@ -2,8 +2,10 @@
 #include <algorithm>
 #include "Event.h"
 
-Event::Callback::Callback(Event& e, std::function<void(Event*)> func)
-	: _id(e._idCounter), _func(func) {
+std::list<Event::Callback>::size_type Event::_idCounter = 0;
+
+Event::Callback::Callback(std::function<void(Event*)> func)
+	: _id(Event::_idCounter++), _func(func) {
 }
 
 void Event::Callback::operator()(Event* e) {
@@ -23,9 +25,8 @@ std::list<Event::Callback>::size_type Event::Callback::GetID() const {
 }
 
 Event::Callback Event::Attach(std::function<void(Event*)> func) {
-	Callback callback = Callback(*this, func);
+	Callback callback = Callback(func);
 	_callbacks.push_back(callback);
-	_idCounter++;
 	return callback;
 }
 

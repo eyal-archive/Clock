@@ -6,7 +6,7 @@ class Event final {
 public:
 	class Callback final {
 	public:
-		Callback(Event&, std::function<void(Event*)>);
+		Callback(std::function<void(Event*)>);
 
 		void operator()(Event*);
 
@@ -23,7 +23,7 @@ public:
 	std::list<Callback>::size_type Size();
 	bool Contains(Callback);
 private:
-	std::list<Callback>::size_type _idCounter = 0;
+	static std::list<Callback>::size_type _idCounter;
 	std::list<Callback> _callbacks;
 };
 
