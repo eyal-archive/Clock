@@ -1,11 +1,10 @@
 #include "Timer.h"
 
 Timer::Timer()
-	: _onThick(new Event()) {
+	: _onThick(std::make_unique<Event>()) {
 }
 
 Timer::~Timer() {
-	delete _onThick;
 }
 
 void Timer::Attach(std::function<void(Event*)> func) {

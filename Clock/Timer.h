@@ -1,5 +1,6 @@
 #pragma once
 #include <ctime>
+#include <memory>
 #include "Event.h"
 #include "Second.h"
 #include "Minute.h"
@@ -18,7 +19,7 @@ public:
 
 	void Tick();
 private:
-	Event* _onThick;
+	const std::unique_ptr<Event> _onThick;
 
 	Hour _hour;
 	Minute _minute;
