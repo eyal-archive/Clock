@@ -9,7 +9,6 @@
 class Timer final {
 public:
 	Timer();
-	~Timer();
 
 	void Attach(std::function<void(Event*)>);
 

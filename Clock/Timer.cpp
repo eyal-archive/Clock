@@ -4,9 +4,6 @@ Timer::Timer()
 	: _onThick(std::make_unique<Event>()) {
 }
 
-Timer::~Timer() {
-}
-
 void Timer::Attach(std::function<void(Event*)> func) {
 	_onThick->Attach(func);
 }

@@ -7,7 +7,6 @@ public:
 	class Callback final {
 	public:
 		Callback(Event&, std::function<void(Event*)>);
-		~Callback();
 
 		void operator()(Event*);
 

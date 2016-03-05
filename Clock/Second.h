@@ -5,5 +5,4 @@ class Second final : public TimeValue {
 public:
 	Second();
 	explicit Second(tm*);
-	~Second();
 };

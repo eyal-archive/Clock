@@ -6,9 +6,6 @@ Event::Callback::Callback(Event& e, std::function<void(Event*)> func)
 	: _id(e._idCounter), _func(func) {
 }
 
-Event::Callback::~Callback() {
-}
-
 void Event::Callback::operator()(Event* e) {
 	_func(e);
 }
