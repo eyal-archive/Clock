@@ -3,7 +3,7 @@
 #include <string>
 #include <memory>
 
-class Console {
+class Console final {
 public:
 	Console();
 	~Console();
