@@ -5,5 +5,5 @@
 
 class ClockDisplay {
 public:
-	virtual void Draw(Hour, Minute, Second) const noexcept = 0;
+	virtual void Draw(Hour, Minute, Second) const = 0;
 };

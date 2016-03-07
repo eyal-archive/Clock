@@ -6,7 +6,7 @@
 class DigitalClockConsoleDisplay final : public ClockDisplay {
 public:
 	DigitalClockConsoleDisplay(Console&);
-	void Draw(Hour, Minute, Second) const noexcept override;
+	void Draw(Hour, Minute, Second) const override;
 private:
 	Console& _console;
 };
