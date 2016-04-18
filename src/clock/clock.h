@@ -1,6 +1,6 @@
 #pragma once
-#include "Timer.h"
-#include "ClockDisplay.h"
+#include "timer.h"
+#include "clock_display.h"
 
 class Clock final {
 public:

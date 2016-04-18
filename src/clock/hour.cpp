@@ -1,4 +1,4 @@
-#include "Hour.h"
+#include "hour.h"
 
 Hour::Hour() : TimeValue() {
 }

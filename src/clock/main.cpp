@@ -1,7 +1,7 @@
-#include "Console.h"
-#include "Timer.h"
-#include "Clock.h"
-#include "DigitalClockConsoleDisplay.h"
+#include "console.h"
+#include "timer.h"
+#include "clock.h"
+#include "digital_clock-console_display.h"
 
 int main() {
 	Console console;

@@ -21,12 +21,6 @@
     <ClCompile Include="Timer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Console.Win32.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DigitalClockConsoleDisplay.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Clock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,13 +30,19 @@
     <ClCompile Include="Second.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TimeValue.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Minute.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Hour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="digital_clock-console_display.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="time_value.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,13 +53,7 @@
     <ClInclude Include="Console.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ClockDisplay.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Clock.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DigitalClockConsoleDisplay.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Event.h">
@@ -74,7 +68,13 @@
     <ClInclude Include="Second.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TimeValue.h">
+    <ClInclude Include="digital_clock-console_display.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="time_value.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clock_display.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

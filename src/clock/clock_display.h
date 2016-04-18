@@ -1,7 +1,7 @@
 #pragma once
-#include "Second.h"
-#include "Minute.h"
-#include "Hour.h"
+#include "second.h"
+#include "minute.h"
+#include "hour.h"
 
 class ClockDisplay {
 public:

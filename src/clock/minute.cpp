@@ -1,4 +1,4 @@
-#include "Minute.h"
+#include "minute.h"
 
 Minute::Minute() : TimeValue() {
 }

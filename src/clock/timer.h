@@ -1,10 +1,10 @@
 #pragma once
 #include <ctime>
 #include <memory>
-#include "Event.h"
-#include "Second.h"
-#include "Minute.h"
-#include "Hour.h"
+#include "event.h"
+#include "second.h"
+#include "minute.h"
+#include "hour.h"
 
 class Timer final {
 public:

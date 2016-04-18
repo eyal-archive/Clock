@@ -1,4 +1,4 @@
-#include "DigitalClockConsoleDisplay.h"
+#include "digital_clock-console_display.h"
 
 DigitalClockConsoleDisplay::DigitalClockConsoleDisplay(Console& console)
 	: _console(console) {

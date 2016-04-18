@@ -1,4 +1,4 @@
-#include "Timer.h"
+#include "timer.h"
 
 Timer::Timer()
 	: _onThick(std::make_unique<Event>()) {

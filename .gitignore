@@ -5,6 +5,8 @@
 *.user
 *.sdf
 *.VC.opendb
+*.VC.db
+~AutoRecover.*
 
 # Build
 _bin/

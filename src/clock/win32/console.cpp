@@ -1,5 +1,5 @@
 #include <windows.h>
-#include "Console.h"
+#include "console.h"
 
 class Console::PlatformDependent {
 public:	

@@ -1,4 +1,4 @@
-#include "Second.h"
+#include "second.h"
 
 Second::Second() : TimeValue() {
 }

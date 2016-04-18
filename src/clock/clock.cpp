@@ -1,5 +1,5 @@
-#include "Clock.h"
-#include "Event.h"
+#include "clock.h"
+#include "event.h"
 
 Clock::Clock(Timer& timer, ClockDisplay& display)
 	: _timer(timer), _display(display) {

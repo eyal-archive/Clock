@@ -1,6 +1,6 @@
 #include <random>
 #include <algorithm>
-#include "Event.h"
+#include "event.h"
 
 std::list<Event::Callback>::size_type Event::_idCounter = 0;
 

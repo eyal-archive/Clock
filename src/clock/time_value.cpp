@@ -1,4 +1,4 @@
-#include "TimeValue.h"
+#include "time_value.h"
 
 TimeValue::TimeValue()
 	: _value(nullptr) {

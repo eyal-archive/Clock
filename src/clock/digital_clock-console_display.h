@@ -1,6 +1,6 @@
 #pragma once
-#include "ClockDisplay.h"
-#include "Console.h"
+#include "clock_display.h"
+#include "console.h"
 
 
 class DigitalClockConsoleDisplay final : public ClockDisplay {
