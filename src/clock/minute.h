@@ -3,6 +3,6 @@
 
 class Minute final : public TimeValue {
 public:
-	Minute();
-	explicit Minute(tm*);
+    Minute();
+    explicit Minute(tm*);
 };

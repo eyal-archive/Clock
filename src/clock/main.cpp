@@ -3,13 +3,14 @@
 #include "clock.h"
 #include "digital_clock-console_display.h"
 
-int main() {
-	Console console;
+int main()
+{
+    Console console;
 
-	DigitalClockConsoleDisplay digitalDisplay(console);
-	
-	Timer timer;
-	Clock digitalClock(timer, digitalDisplay);
+    DigitalClockConsoleDisplay digitalDisplay(console);
 
-	digitalClock.Start();
+    Timer timer;
+    Clock digitalClock(timer, digitalDisplay);
+
+    digitalClock.Start();
 }

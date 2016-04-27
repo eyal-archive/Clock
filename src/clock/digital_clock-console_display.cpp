@@ -1,11 +1,13 @@
 #include "digital_clock-console_display.h"
 
 DigitalClockConsoleDisplay::DigitalClockConsoleDisplay(Console& console)
-	: _console(console) {
-	_console.HideCursor();
+    : _console(console)
+{
+    _console.HideCursor();
 }
 
-void DigitalClockConsoleDisplay::Draw(Hour hour, Minute min, Second sec) const {
-	_console.Clear();
-	_console.Write(hour.ToString() + ":" + min.ToString(true) + ":" + sec.ToString(true));
+void DigitalClockConsoleDisplay::Draw(Hour hour, Minute min, Second sec) const
+{
+    _console.Clear();
+    _console.Write(hour.ToString() + ":" + min.ToString(true) + ":" + sec.ToString(true));
 }

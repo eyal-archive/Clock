@@ -4,6 +4,11 @@
 #include "hour.h"
 
 class ClockDisplay {
+protected:
+    ~ClockDisplay()
+    {
+    }
+
 public:
-	virtual void Draw(Hour, Minute, Second) const = 0;
+    virtual void Draw(Hour, Minute, Second) const = 0;
 };

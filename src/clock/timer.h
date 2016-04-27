@@ -1,5 +1,4 @@
 #pragma once
-#include <ctime>
 #include <memory>
 #include "event.h"
 #include "second.h"
@@ -8,21 +7,21 @@
 
 class Timer final {
 public:
-	Timer();
+    Timer();
 
-	void Attach(std::function<void(Event*)>);
+    void Attach(std::function<void(Event*)>) const;
 
-	Hour GetHour() const;
-	Minute GetMinute() const;
-	Second GetSecond() const;
+    Hour GetHour() const;
+    Minute GetMinute() const;
+    Second GetSecond() const;
 
-	void Tick();
+    void Tick();
 private:
-	const std::unique_ptr<Event> _onThick;
+    const std::unique_ptr<Event> _onThick;
 
-	Hour _hour;
-	Minute _minute;
-	Second _second;
+    Hour _hour;
+    Minute _minute;
+    Second _second;
 
-	int _oldSec = -1;
+    int _oldSec = -1;
 };
